@@ -5,7 +5,33 @@ namespace StudentProgram {
     class Program {
         static void Main(string[] args)
         {
-            Example2();
+            Example3();
+        }
+
+        static void Example3() {
+            // WAP to create string and print its length
+            // and do compare, concat and copy operation
+            string abc = "Sulav";
+            string abcd = new string("Garima");
+
+            // Length
+            Console.WriteLine(abcd.Length);
+
+            // compare two strings
+            int res = String.Compare(abc, abcd, false);
+            Console.WriteLine(res);
+
+            string concatRes = String.Concat(abc, abcd);
+            Console.WriteLine(concatRes);
+
+
+            string concatRes2 = String.Concat(abc, abcd, "hello");
+            Console.WriteLine(concatRes2);
+
+
+            string concatRes3 = String.Concat(abc, abcd, "hello", "hi", "hey", "hoho");
+            Console.WriteLine(concatRes3);
+
         }
 
         static void Example2() {
@@ -19,16 +45,18 @@ namespace StudentProgram {
                 sum += item;
             }
 
-            Double average = sum / 7;
             Console.WriteLine("---------------------- The Hisab Machine ----------------------");
             Console.WriteLine("");
             Console.WriteLine("---------------------- The Average for each day ----------------------");
+            Double average = sum / 7;
             Console.WriteLine(average);
             Console.WriteLine("---------------------- The Average for this month ----------------------");
-            Console.WriteLine(average * 30);
+            Double monthlyIncome = average * 30;
+            Console.WriteLine(monthlyIncome);
             Console.WriteLine("---------------------- The Average for this year ----------------------");
-            Console.WriteLine(average * 30 * 12);
-            Console.WriteLine("---------------------- Total Earning ----------------------");
+            Double yearlyIncome = monthlyIncome * 12;
+            Console.WriteLine(yearlyIncome);
+            Console.WriteLine("---------------------- Total Earning of this week ----------------------");
             Console.WriteLine(sum);
             Console.WriteLine("---------------------- Thank You ----------------------");
         }
